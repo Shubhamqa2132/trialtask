@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test suite" parallel="false">
+
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+      <listener class-name="testproject.qa.TestListener"/>
+  </listeners>
+  
+  
+  <!-- dtiverType = Firefox, Chrome -->
+  <parameter name="driverType" value="Chrome"></parameter>
+  
+  <!-- Base URL -->
+  <parameter name="url" value="https://acme-qa.everreal.co/app/public/apply/d986458c-4423-4441-be64-77774109864b/applications/step2"></parameter>
+
+ 
+  <test name="Smoke Tests">
+    <classes>
+      <class name="testproject.qa.SmokeTest"/>
+    </classes>
+  </test>
+    
+  
+</suite>

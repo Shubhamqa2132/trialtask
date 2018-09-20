@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Smoke Test suite" parallel="false">
+
+  <listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+      <listener class-name="testproject.qa.TestListener"/>
+  </listeners>
+  
+  
+  <!-- dtiverType = Firefox, Chrome -->
+  <parameter name="driverType" value="Chrome"></parameter>
+  
+  <!-- Job related param skills need to be keyed comma separated -->
+  <parameter name="url" value="http://demo.openaxes.com:82"></parameter>
+
+ 
+  <test name="Smoke Tests">
+    <classes>
+      <class name="testproject.qa.SmokeTest"/>
+    </classes>
+  </test>
+    
+  
+</suite>
